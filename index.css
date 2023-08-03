@@ -4,13 +4,22 @@
 }
 
 .container {
+        /* display: flex;
+        flex-wrap: wrap; */
+        
         display: grid;
-        grid-gap: 0.5px;
+        grid-gap: 0px;
         grid-template-rows: repeat(var(--grid-rows), 1fr);
-        grid-template-columns: repeat(var(--grid-columns), 1fr);
+        grid-template-columns: repeat(var(--grid-columns), 1fr); 
+        height: 500px;
+        width: 500px;
+        /* Centering div manually w/o using flexbox*/
+        margin: 0 auto;
+        
 }
 
 .grid-box {
-        padding: 1px;
+        /* padding: 1px; */
         border: 1px solid black;
+   
 }
