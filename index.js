@@ -1,6 +1,4 @@
 const container = document.querySelector(".container")
-// const grid = document.createElement("div");
-// container.appendChild(grid);
 
 // create a function to make desired grid
 function makeGrid(rows, columns) {
@@ -13,3 +11,12 @@ function makeGrid(rows, columns) {
 }
 
 makeGrid(16, 16);
+
+// create hover effect for grid-box
+const grids = document.querySelectorAll(".grid-box");
+
+grids.forEach(grid => {
+        grid.addEventListener("mousedown", function() {
+                grid.classList.add("black");
+        })
+})
