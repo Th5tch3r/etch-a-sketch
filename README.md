@@ -8,3 +8,4 @@ Still under progress:
 - [ ] create scroll bar option to set desired grid size
         - achieving this by creating an input slider, setting value to equal what chosen then make grid according to slider value
                 -create size value div to change according to slider
+        - need to set inner html to be according the grid size slider
