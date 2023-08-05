@@ -8,11 +8,14 @@ function setGrid(value) {
         container.innerHTML = "";
         makeGrid(value);
 }
-window.onload = () => {
-        makeGrid(defaultSize);
+
+function updateSizeValue(value) {
+        sizeValue.innerHTML = `${value} x ${value}`;
 }
 
 sizeSlider.onchange = (e) => setGrid(e.target.value);
+sizeSlider.onmousemove = (e) => updateSizeValue(e.target.value);
+
 
 // create a function to make desired grid, adding drawing effect in as well
 function makeGrid(size) {
@@ -40,4 +43,8 @@ function makeGrid(size) {
 
         }
         
+}
+
+window.onload = () => {
+        makeGrid(defaultSize);
 }
