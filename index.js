@@ -1,16 +1,32 @@
-const container = document.querySelector(".container")
+let defaultSize = 16;
 
-// create a function to make desired grid
-function makeGrid(rows, columns) {
-        container.style.setProperty("--grid-rows", rows);
-        container.style.setProperty("--grid-columns", columns);
-        for (let i = 0; i < (rows * columns); i++ ) {
-                let box = document.createElement("div");
-                container.appendChild(box).className = "grid-box";
-        }
+const container = document.querySelector(".container");
+const sizeSlider = document.querySelector("#sizeSlider");
+const sizeValue = document.querySelector("#sizeValue");
+
+function setGrid(value) {
+        container.innerHTML = "";
+        makeGrid(value);
+}
+window.onload = () => {
+        makeGrid(defaultSize);
 }
 
-makeGrid(20, 20);
+sizeSlider.onchange = (e) => setGrid(e.target.value);
+
+// create a function to make desired grid
+function makeGrid(size) {
+        container.style.setProperty("--grid-rows", size);
+        container.style.setProperty("--grid-columns", size);
+        for (let i = 0; i < (size * size); i++ ) {
+                let box = document.createElement("div");
+                container.appendChild(box).className = "grid-box";
+                box.addEventListener("mousedown", () => {box.className = "black"});
+
+        }
+        
+}
+
 
 // create hover effect for grid-box using object, allowing the state of the object
 // to be temporarily stored
@@ -34,4 +50,3 @@ function draw(e) {
         e.fromElement.classList.add("black");
         }
 }
-
