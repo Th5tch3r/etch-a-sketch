@@ -10,13 +10,28 @@ function makeGrid(rows, columns) {
         }
 }
 
-makeGrid(16, 16);
+makeGrid(20, 20);
 
-// create hover effect for grid-box
+// create hover effect for grid-box using object, allowing the state of the object
+// to be temporarily stored
 const grids = document.querySelectorAll(".grid-box");
+let mouseEvent = {};
 
 grids.forEach(grid => {
-        grid.addEventListener("mousedown", function() {
-                grid.classList.add("black");
-        })
+        grid.addEventListener("mouseover", draw);
 })
+
+container.addEventListener("mousedown", () => mouseEvent.mouseDown = true);
+container.addEventListener("mouseup", () => delete mouseEvent.mouseDown);
+
+// create function to check if the mouse event is still occurring
+function canDraw() {
+        return mouseEvent.mouseDown;
+}
+
+function draw(e) {
+        if (canDraw()) {
+        e.fromElement.classList.add("black");
+        }
+}
+
