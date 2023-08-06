@@ -10,5 +10,11 @@ Still under progress:
                 - [x] create size value div to change according to slider
         - [x]need to set inner html to be according the grid size slider
 
-- [ ] create reset button
+- [x] create reset button
         - make page to reload 
+
+- [ ] need to figure out how to remove class from element using a button click
+
+- [ ] edit on css a little 
+        - change background color
+        - remove border line in grid

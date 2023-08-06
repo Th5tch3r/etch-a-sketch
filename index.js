@@ -48,3 +48,11 @@ function makeGrid(size) {
 window.onload = () => {
         makeGrid(defaultSize);
 }
+
+// Reset button
+const resetButton = document.getElementById("reset");
+
+resetButton.addEventListener("click", () => {
+        window.location.reload();
+})
+
