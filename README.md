@@ -13,7 +13,10 @@ Still under progress:
 - [x] create reset button
         - make page to reload 
 
-- [ ] need to figure out how to remove class from element using a button click
+- [X] need to figure out how to remove class from element using a button click
+        - able to achieved this by clearing a reload grid function
+        - keeping the current size set by input range in a variable 
+        - reload the grid and use the current size grid as argument in makeGrid()
 
 - [ ] edit on css a little 
         - change background color

@@ -1,20 +1,38 @@
-let defaultSize = 16;
+const defaultSize = 16;
+
+let currentSize = defaultSize;
 
 const container = document.querySelector(".container");
 const sizeSlider = document.querySelector("#sizeSlider");
 const sizeValue = document.querySelector("#sizeValue");
+const clearButton = document.querySelector("#clear");
 
 function setGrid(value) {
-        container.innerHTML = "";
+        clearGrid();
         makeGrid(value);
+        setCurrentSize(value);
 }
 
 function updateSizeValue(value) {
         sizeValue.innerHTML = `${value} x ${value}`;
 }
 
+function setCurrentSize(newSize) {
+        currentSize = newSize;
+}
+
+function reloadGrid() {
+        clearGrid();
+        makeGrid(currentSize);
+}
+
+function clearGrid() {
+        container.innerHTML = "";
+}
+
 sizeSlider.onchange = (e) => setGrid(e.target.value);
 sizeSlider.onmousemove = (e) => updateSizeValue(e.target.value);
+clearButton.onclick = () => reloadGrid();
 
 
 // create a function to make desired grid, adding drawing effect in as well
@@ -40,7 +58,6 @@ function makeGrid(size) {
                 let box = document.createElement("div");
                 container.appendChild(box).className = "grid-box";
                 box.addEventListener("mouseover", draw);
-
         }
         
 }
@@ -55,4 +72,5 @@ const resetButton = document.getElementById("reset");
 resetButton.addEventListener("click", () => {
         window.location.reload();
 })
+
 
