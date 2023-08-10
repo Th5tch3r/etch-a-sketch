@@ -9,6 +9,7 @@ body {
         background-color: #3A6EA5;
         color: #FF6700;
         font-family: 'Handjet', cursive;
+        overflow-x: hidden;
 }
 
 header {
@@ -33,8 +34,8 @@ header {
         grid-gap: 0px;
         grid-template-rows: repeat(var(--grid-rows), 1fr);
         grid-template-columns: repeat(var(--grid-columns), 1fr); 
-        height: 500px;
-        width: 500px;
+        height: 700px;
+        width: 700px;
         /* Centering div manually w/o using flexbox*/
         margin: 0 auto;
         
@@ -47,12 +48,49 @@ header {
    
 }
 
+.setting {
+        display: flex;
+        flex-direction: column;
+        padding-left: 20%;
+        font-size: 50px;
+}
+
+.setting #sizeSlider {
+        accent-color: #FF6700;
+        margin-bottom: 20px;
+}
+
+.buttons {
+        display: flex;
+        gap: 30px;
+        justify-content: center;
+}
+
+.setting button {
+        background-color: #EBEBEB;
+        border: none;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        height: 110px;
+        width: 110px;
+        border-radius: 100px;
+        color: #12263A;
+}
+
+.setting button:hover {
+        background-color: #FF6700;
+        color: #EBEBEB;
+}
+
 .black {
         background-color: black;
 }
 
 #footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 40px;
         text-align: center;
-        display: flex;
-        flex-direction: column;
+        font-size: 20px;
 }

@@ -14,7 +14,7 @@ function setGrid(value) {
 }
 
 function updateSizeValue(value) {
-        sizeValue.innerHTML = `${value} x ${value}`;
+        sizeValue.innerHTML = `Grid Size: ${value} x ${value}`;
 }
 
 function setCurrentSize(newSize) {
