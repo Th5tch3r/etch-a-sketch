@@ -1,6 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Handjet&display=swap');
+
 :root {
         --grid-columns: 1;
         --grid-rows: 1;
+}
+
+body {
+        background-color: #3A6EA5;
+        color: #FF6700;
+        font-family: 'Handjet', cursive;
+}
+
+header {
+        text-align: center;
+        font-size: 6em;
+        padding-top: 20px;
+        padding-bottom: 20px;
+}
+
+.display{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        align-items: center;
 }
 
 .container {
@@ -20,10 +42,17 @@
 
 .grid-box {
         /* padding: 1px; */
-        border: 1px solid black;
+        border: 1px solid #C0C0C0;
+        background-color: #EBEBEB;
    
 }
 
 .black {
         background-color: black;
+}
+
+#footer {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
 }

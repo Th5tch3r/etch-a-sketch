@@ -5,17 +5,21 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Sketchy Pad</title>
         <link rel="stylesheet" href="./index.css">
+        <link rel="icon" type="image/x-icon" href="./images/pencil.png">
         <script src="./index.js" defer></script>
 </head>
 <body>
         <header>Sketchy Pad</header>
-        <div class="container"></div>
-        <div>
-                <div id="sizeValue">16 x 16</div>
-                <input id="sizeSlider" type="range" value="16" min="10" max="100"> 
-                <button id="reset">Reset to Default</button>
-                <button id="clear">Clear Current Canvas</button>
+        <div class="display">
+                <div class="container"></div>
+                <div>
+                        <div id="sizeValue">16 x 16</div>
+                        <input id="sizeSlider" type="range" value="16" min="10" max="100"> 
+                        <button id="reset">Reset to Default</button>
+                        <button id="clear">Clear Current Canvas</button>
+                </div>
         </div>
+        <footer id="footer">©thatcherphan 2023</footer>
 
 </body>
 </html>
